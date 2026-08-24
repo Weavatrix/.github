@@ -26,12 +26,14 @@ The stack is deliberately layered:
 
 Installing one boundary never silently grants another.
 
-## Evidence engines
+## Independent evidence products
+
+Every product below owns its repository, API, release evidence, package metadata, and license. They can be installed independently; ecosystem composition does not make them modules of Core, Online, or one another.
 
 | Layer | Projects | What it owns |
 | --- | --- | --- |
 | Graph and source | [Graph](https://github.com/Weavatrix/weavatrix-graph), [Parse](https://github.com/Weavatrix/weavatrix-parse), [Scan](https://github.com/Weavatrix/weavatrix-scan) | Typed provenance, lossless structure, deterministic filesystem evidence |
-| Native Node and Bun | [Graph](https://www.npmjs.com/package/weavatrix-graph), [Scan](https://www.npmjs.com/package/weavatrix-scan), [Memory](https://www.npmjs.com/package/weavatrix-memory) | The same Rust engines through Node-API, with platform packages and separate Node/Bun evidence |
+| Native Node and Bun | [Graph](https://www.npmjs.com/package/weavatrix-graph), [Scan](https://www.npmjs.com/package/weavatrix-scan), [Memory](https://www.npmjs.com/package/weavatrix-memory) | Three separately released products exposing their own Rust engines through Node-API, each with platform packages and Node/Bun evidence |
 | Retrieval and semantics | [Search](https://github.com/Weavatrix/weavatrix-search), [Vector Search](https://github.com/Weavatrix/weavatrix-search-vector), [Semantic](https://github.com/Weavatrix/weavatrix-semantic) | Exact and bounded retrieval, rescored relations, policy evidence |
 | Time and change | [Memory](https://github.com/Weavatrix/weavatrix-memory), [Git](https://github.com/Weavatrix/weavatrix-git), [Clone](https://github.com/Weavatrix/weavatrix-clone) | Revision-aware facts, history, manifests, duplicate families |
 | Language intelligence | [LSP](https://github.com/Weavatrix/weavatrix-lsp), [Rust engine](https://github.com/Weavatrix/weavatrix-rust) | Bounded language-server evidence and protocol-independent orchestration |
