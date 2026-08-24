@@ -31,11 +31,13 @@ Installing one boundary never silently grants another.
 | Layer | Projects | What it owns |
 | --- | --- | --- |
 | Graph and source | [Graph](https://github.com/Weavatrix/weavatrix-graph), [Parse](https://github.com/Weavatrix/weavatrix-parse), [Scan](https://github.com/Weavatrix/weavatrix-scan) | Typed provenance, lossless structure, deterministic filesystem evidence |
+| Native Node and Bun | [Graph](https://www.npmjs.com/package/weavatrix-graph), [Scan](https://www.npmjs.com/package/weavatrix-scan), [Memory](https://www.npmjs.com/package/weavatrix-memory) | The same Rust engines through Node-API, with platform packages and separate Node/Bun evidence |
 | Retrieval and semantics | [Search](https://github.com/Weavatrix/weavatrix-search), [Vector Search](https://github.com/Weavatrix/weavatrix-search-vector), [Semantic](https://github.com/Weavatrix/weavatrix-semantic) | Exact and bounded retrieval, rescored relations, policy evidence |
 | Time and change | [Memory](https://github.com/Weavatrix/weavatrix-memory), [Git](https://github.com/Weavatrix/weavatrix-git), [Clone](https://github.com/Weavatrix/weavatrix-clone) | Revision-aware facts, history, manifests, duplicate families |
 | Language intelligence | [LSP](https://github.com/Weavatrix/weavatrix-lsp), [Rust engine](https://github.com/Weavatrix/weavatrix-rust) | Bounded language-server evidence and protocol-independent orchestration |
 | Safe action | [Edit](https://github.com/Weavatrix/weavatrix-edit), [Refactor Plan](https://github.com/Weavatrix/weavatrix-refactor-plan), [Worktree](https://github.com/Weavatrix/weavatrix-worktree), [Rust Refactor](https://github.com/Weavatrix/weavatrix-rust-refactor) | Immutable edits, versioned plans, journaling, rollback |
-| Composition | [Loom](https://github.com/Weavatrix/weavatrix-loom), [JavaScript](https://github.com/Weavatrix/weavatrix-js), [JavaScript Refactor](https://github.com/Weavatrix/weavatrix-refactor-js) | Capability composition and maintained compatibility lines |
+| Visual programming | [Loom](https://github.com/Weavatrix/weavatrix-loom) | Turns real code into typed blocks for human/AI composition, graph execution and debugging, then compiles ordinary standalone software |
+| Compatibility | [JavaScript](https://github.com/Weavatrix/weavatrix-js), [JavaScript Refactor](https://github.com/Weavatrix/weavatrix-refactor-js) | Maintained JavaScript compatibility lines, separate from the native Rust component libraries |
 
 ## Measured, scoped performance
 
@@ -43,6 +45,7 @@ Performance claims are workload results, not universal rankings. Each project pu
 
 - **Search:** a resident exact query over a 200k-file Windows fixture measured **24.4 ms**, versus **4,927.2 ms** through a fresh ripgrep process. On the disclosed Ubuntu 200k end-to-end row, ripgrep was **1.35× faster**—platform truth stays visible.
 - **Git:** 1,000 warm history entries measured **0.355 ms**, versus **0.884 ms** with gix and **1.552 ms** with libgit2 under the documented exact-parity contract.
+- **Graph for Node/Bun:** equal materialized BFS on 50,000 nodes and 149,991 edges measured **2.91× faster than Graphology on Node 24** and **2.64× on Bun 1.4**. Tiny-graph rows are treated as timer noise, not a universal win.
 - **Scan:** on the million-file fixture, streaming traversal measured **15.5% faster** than jwalk with **95.2% less** peak working set.
 
 See the [ecosystem and evidence links](https://weavatrix.com/ecosystem) for the full methodology.
