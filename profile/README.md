@@ -4,9 +4,10 @@
   </a>
   <h1>Weavatrix</h1>
   <p><strong>Build agents that understand before they act.</strong></p>
-  <p>Open evidence infrastructure for AI software agents: repository graphs, bounded retrieval, temporal memory, reproducible proof, and safe action through explicit trust boundaries.</p>
+  <p>Open evidence infrastructure for AI software agents: repository graphs, a Search Evidence Graph for the site you shipped, bounded retrieval, temporal memory, reproducible proof, and safe action through explicit trust boundaries.</p>
   <p>
     <a href="https://weavatrix.com">Website</a> ·
+    <a href="https://weavatrix.com/seo">SEO</a> ·
     <a href="https://weavatrix.com/ecosystem">Ecosystem</a> ·
     <a href="https://www.npmjs.com/package/weavatrix">npm</a> ·
     <a href="https://crates.io/crates/weavatrix">Cargo</a>
