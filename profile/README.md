@@ -19,9 +19,10 @@ Models are becoming more capable while real repositories become harder to reason
 
 The stack is deliberately layered:
 
-- **Core** — 43 read-only repository-intelligence methods for orientation, impact, APIs, architecture, Git, search, semantics, and memory.
+- **Core** — 44 read-only repository-intelligence methods for orientation, impact, APIs, architecture, Git, search, semantics, and memory.
 - **Refactor** — 11 focused methods for exact previews, byte-bound confirmation, crash-recoverable apply, and drift-checked rollback.
 - **Online** — 7 explicit network methods for endpoint status, advisories, malware review, architecture contracts, and preview-confirmed source-free sync.
+- **SEO** — 15 MCP tools and a CLI that are the same native binary, over a revision-bound Search Evidence Graph, so a finding on a live page resolves to the source that produced it.
 - **Quality** — revision-bound obligations, runner evidence, immutable proofs, and honest incomplete-evidence states.
 
 Installing one boundary never silently grants another.
@@ -39,6 +40,7 @@ Every product below owns its repository, API, release evidence, package metadata
 | Language intelligence | [LSP](https://github.com/Weavatrix/weavatrix-lsp), [Rust engine](https://github.com/Weavatrix/weavatrix-rust) | Bounded language-server evidence and protocol-independent orchestration |
 | Safe action | [Edit](https://github.com/Weavatrix/weavatrix-edit), [Refactor Plan](https://github.com/Weavatrix/weavatrix-refactor-plan), [Worktree](https://github.com/Weavatrix/weavatrix-worktree), [Rust Refactor](https://github.com/Weavatrix/weavatrix-rust-refactor) | Immutable edits, versioned plans, journaling, rollback |
 | Visual programming | [Loom](https://github.com/Weavatrix/weavatrix-loom) | Turns real code into typed blocks for human/AI composition, graph execution and debugging, then compiles ordinary standalone software |
+| Search intelligence | [SEO](https://github.com/Weavatrix/weavatrix-seo), [SEO CLI](https://github.com/Weavatrix/weavatrix-seo-cli), [SEO MCP](https://github.com/Weavatrix/weavatrix-seo-mcp), [npm](https://www.npmjs.com/package/weavatrix-seo), [crates.io](https://crates.io/crates/weavatrix-seo) | CLI commands and 15 MCP tools over one Search Evidence Graph. MCP is not a second product — `weavatrix-seo mcp` is the agent socket. Each crates.io layer crate has its own README. |
 | Compatibility | [JavaScript](https://github.com/Weavatrix/weavatrix-js), [JavaScript Refactor](https://github.com/Weavatrix/weavatrix-refactor-js) | Maintained JavaScript compatibility lines, separate from the native Rust component libraries |
 
 ## Measured, scoped performance
